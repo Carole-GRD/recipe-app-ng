@@ -40,3 +40,13 @@ Dans le fichier angular.json :
     }
 }
 ```
+
+
+## Structure de l'app
+
+![Planning](./src/assets/structure/planning.png)
+
+
+## Création des composants
+
+![Components](./src/assets/structure/components.png)
