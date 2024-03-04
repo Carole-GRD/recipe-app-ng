@@ -1,27 +1,42 @@
-# RecipeAppNg
+# Recipe App Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
+Cette application my-first-app a été développée dans le cadre de mon apprentissage du framework Angular, en suivant le cours Udemy dédié. Elle représente une étape importante dans mon parcours d'apprentissage, me permettant de mettre en pratique les concepts enseignés tout en explorant les fonctionnalités puissantes offertes par Angular.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Version d'Angular CLI
+Ce projet a été généré avec [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```js
+ng new recipe-app-ng
+```
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Librairie
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+[Bootstrap version 3](https://getbootstrap.com/docs/3.3/getting-started/)
 
-## Further help
+```js
+npm install --save bootstrap@3
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Dans le fichier angular.json :
+
+```js
+"architect": {
+    "build": {
+        ...
+        "options": {
+        ...
+        "styles": [
+            "node_modules/bootstrap/dist/css/bootstrap.min.css",
+            ...
+        ],
+        ...
+        },
+    }
+}
+```
