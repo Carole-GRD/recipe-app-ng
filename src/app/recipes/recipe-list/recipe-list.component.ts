@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RecipeItemComponent } from './recipe-item/recipe-item.component';
 
+
 @Component({
   selector: 'app-recipe-list',
   standalone: true,
@@ -10,6 +11,8 @@ import { RecipeItemComponent } from './recipe-item/recipe-item.component';
   templateUrl: './recipe-list.component.html',
   styleUrl: './recipe-list.component.css'
 })
-export class RecipeListComponent {
 
+
+export class RecipeListComponent {
+  recipes = [];
 }
