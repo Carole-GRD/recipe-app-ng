@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RecipeItemComponent } from './recipe-item/recipe-item.component';
+import { Recipe } from '../recipe.model';
 
 
 @Component({
@@ -14,5 +15,7 @@ import { RecipeItemComponent } from './recipe-item/recipe-item.component';
 
 
 export class RecipeListComponent {
-  recipes = [];
+  recipes: Recipe[] = [
+    new Recipe('A Test Recipe', 'This is simply a test', 'https://www.maxpixel.net/static/photo/1x/Recipe-Healthy-Food-Cooking-Delicious-Diet-Plate-753954.jpg'),
+  ];
 }
