@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
 import { ShoppingEditComponent } from './shopping-edit/shopping-edit.component';
+import { Ingredient } from '../shared/ingredient.model';
+import { NgFor } from '@angular/common';
 
 
 @Component({
   selector: 'app-shopping-list',
   standalone: true,
   imports: [
-    ShoppingEditComponent
+    ShoppingEditComponent,
+    NgFor
   ],
   templateUrl: './shopping-list.component.html',
   styleUrl: './shopping-list.component.css'
@@ -14,5 +17,8 @@ import { ShoppingEditComponent } from './shopping-edit/shopping-edit.component';
 
 
 export class ShoppingListComponent {
-  ingredients = [];
+  ingredients: Ingredient[] = [
+    new Ingredient('Apples', 5),
+    new Ingredient('Tomatoes', 10),
+  ];
 }
