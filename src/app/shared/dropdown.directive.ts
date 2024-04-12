@@ -47,6 +47,18 @@ export class DropdownDirective {
     // Cette ligne vérifie si l'élément cliqué est à l'intérieur de l'élément hôte de la directive.
     // Si c'est le cas, isOpen est inversé (true devient false et vice versa).
     // Si le clic est en dehors de l'élément hôte, isOpen est mis à false, fermant ainsi le dropdown si il était ouvert.
+    
+    // --------------------------------------------------------------------------------------------
+    // console.log(event.target);                 
+    // event.target  -> élément sur lequel on a cliqué
+    
+    // console.log(this.elRef.nativeElement);
+    // this.elRef.nativeElement -> élément hôte de la directive (élément sur lequel la directive "appDropdown" est appliquée)
+    
+    // console.log(this.elRef.nativeElement.contains(event.target));
+    // this.elRef.nativeElement.contains(event.target) -> true si l'élément cliqué est à l'intérieur de l'élément hôte de la directive, sinon false
+    // --------------------------------------------------------------------------------------------
+    
     this.isOpen = this.elRef.nativeElement.contains(event.target) ? !this.isOpen : false;
   }
 
