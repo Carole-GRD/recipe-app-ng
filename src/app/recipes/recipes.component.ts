@@ -4,6 +4,9 @@ import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { Recipe } from './recipe.model';
 import { NgIf } from '@angular/common';
 import { RecipeService } from './recipe.service';
+import { RouterModule } from '@angular/router';
+import { RecipeStartComponent } from './recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './recipe-edit/recipe-edit.component';
 
 
 @Component({
@@ -12,7 +15,10 @@ import { RecipeService } from './recipe.service';
   imports: [
     RecipeListComponent,
     RecipeDetailComponent,
-    NgIf
+    RecipeStartComponent,
+    RecipeEditComponent,
+    NgIf,
+    RouterModule
   ],
   templateUrl: './recipes.component.html',
   styleUrl: './recipes.component.css',

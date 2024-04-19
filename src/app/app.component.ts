@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-import { NgIf } from '@angular/common';
+import { CommonModule, NgIf } from '@angular/common';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
 
 
@@ -11,7 +11,8 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet,
+    CommonModule,  
+    RouterModule,
     HeaderComponent,
     RecipesComponent,
     ShoppingListComponent,
@@ -24,11 +25,5 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
 
 
 export class AppComponent {
-
-  loadedFeature = 'recipe';
-
-  onNavigate(feature: string) {
-    this.loadedFeature = feature;
-  }
   
 }
